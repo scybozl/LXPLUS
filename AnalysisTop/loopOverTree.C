@@ -155,7 +155,31 @@ void loopOverTree() {
 
   c1->cd();
   gStyle->SetPalette(1);
+  tMatrix_el_pt->GetXaxis()->SetTitle("Electron p_{t}^{reco}");
+  tMatrix_el_pt->GetYaxis()->SetTitle("Electron p_{t}^{part}");
+  tMatrix_el_pt->Draw("COLZ");
+  c1->SaveAs("el_pt.pdf");
+
+  tMatrix_mu_pt->GetXaxis()->SetTitle("Muon p_{t}^{reco}");
+  tMatrix_mu_pt->GetYaxis()->SetTitle("Muon p_{t}^{part}");
   tMatrix_mu_pt->Draw("COLZ");
+  c1->SaveAs("mu_pt.pdf");
+
+  tMatrix_el_eta->GetXaxis()->SetTitle("Electron \eta^{reco}");
+  tMatrix_el_eta->GetYaxis()->SetTitle("Electron \eta^{part}");
+  tMatrix_el_eta->Draw("COLZ");
+  c1->SaveAs("el_eta.pdf");
+
+  tMatrix_mu_eta->GetXaxis()->SetTitle("Muon \eta^{reco}");
+  tMatrix_mu_eta->GetYaxis()->SetTitle("Muon \eta^{part}");
+  tMatrix_mu_eta->Draw("COLZ");
+  c1->SaveAs("mu_eta.pdf");
+
+  tMatrix_n_jets->GetXaxis()->SetTitle("n_{jets}^{reco}");
+  tMatrix_n_jets->GetYaxis()->SetTitle("n_{jets}^{part}");
+  tMatrix_n_jets->Draw("COLZ");
+  c1->SaveAs("n_jets.pdf");
+
 /*
   recoLevel->ResetBranchAddresses();
 
